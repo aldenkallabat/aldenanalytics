@@ -587,7 +587,7 @@ main {
     }
     
     main {
-        padding: calc(60px + var(--spacing-sm)) var(--spacing-sm) var(--spacing-md) var(--spacing-sm);
+        padding: calc(60px + var(--spacing-sm)) var(--spacing-sm) var(--spacing-md) var(--spacing-xl);
         width: 100%;
         max-width: 100%;
     }
