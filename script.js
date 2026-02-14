@@ -56,7 +56,7 @@ function initSmoothScroll() {
 
 function highlightActiveNavLink() {
     const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('nav a');
+    const navLinks = document.querySelectorAll('nav a, .mobile-nav a, .dropdown-menu a');
     
     navLinks.forEach(link => {
         // Get the resolved full pathname from the link
@@ -76,6 +76,10 @@ function highlightActiveNavLink() {
         if (isActive) {
             link.style.background = 'rgba(21, 255, 224, 0.2)';
             link.style.color = '#15ffe0';
+        } else {
+            // Reset non-active links
+            link.style.background = '';
+            link.style.color = '';
         }
     });
 }
