@@ -589,7 +589,7 @@ main {
     }
     
     main {
-        padding: calc(60px + var(--spacing-sm)) var(--spacing-sm) var(--spacing-xl) var(--spacing-sm);
+        padding: calc(60px + var(--spacing-sm)) var(--spacing-sm) var(--spacing-2xl) var(--spacing-sm);
         width: 100%;
         max-width: 100%;
     }
