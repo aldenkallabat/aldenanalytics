@@ -59,28 +59,19 @@ function highlightActiveNavLink() {
     const navLinks = document.querySelectorAll('nav a');
     
     navLinks.forEach(link => {
-        const linkHref = link.getAttribute('href');
+        // Get the resolved full pathname from the link
+        const linkPath = new URL(link.href).pathname;
         
-        // Normalize paths for comparison
-        let normalizedCurrentPath = currentPath;
+        // Normalize paths - remove trailing slashes for comparison
+        let normalizedCurrentPath = currentPath.endsWith('/') && currentPath.length > 1 
+            ? currentPath.slice(0, -1) 
+            : currentPath;
+        let normalizedLinkPath = linkPath.endsWith('/') && linkPath.length > 1 
+            ? linkPath.slice(0, -1) 
+            : linkPath;
         
-        // Remove trailing slash for comparison (except for root)
-        if (normalizedCurrentPath !== '/' && normalizedCurrentPath.endsWith('/')) {
-            normalizedCurrentPath = normalizedCurrentPath.slice(0, -1);
-        }
-        
-        // Check if this link matches the current page
-        let isActive = false;
-        
-        if (linkHref === '/') {
-            // Home page - match only root or /index.html
-            isActive = (normalizedCurrentPath === '/' || normalizedCurrentPath === '/index.html' || normalizedCurrentPath === '');
-        } else {
-            // Other pages - match if current path starts with link href
-            isActive = normalizedCurrentPath === linkHref || 
-                       normalizedCurrentPath.startsWith(linkHref + '/') ||
-                       normalizedCurrentPath === linkHref + '/index.html';
-        }
+        // Check if paths match
+        const isActive = normalizedCurrentPath === normalizedLinkPath;
         
         if (isActive) {
             link.style.background = 'rgba(21, 255, 224, 0.2)';
