@@ -431,7 +431,8 @@ main {
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 1024px) {
+@media (max-width: 1024px) 
+{
     .cards-grid {
         grid-template-columns: 1fr;
     }
@@ -441,7 +442,8 @@ main {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) 
+{
     header {
         flex-direction: row;
         gap: var(--spacing-xs);
@@ -587,7 +589,7 @@ main {
     }
     
     main {
-        padding: calc(60px + var(--spacing-sm)) var(--spacing-sm) var(--spacing-md) var(--spacing-xl);
+        padding: calc(60px + var(--spacing-sm)) var(--spacing-sm) var(--spacing-xl) var(--spacing-sm);
         width: 100%;
         max-width: 100%;
     }
