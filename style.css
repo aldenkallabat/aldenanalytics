@@ -230,7 +230,7 @@ main {
 .hero-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-md);
     align-items: center;
     margin-bottom: var(--spacing-xl);
     min-height: 60vh;
