@@ -550,8 +550,10 @@ main {
     }
     
     .hero-section {
+        grid-template-columns: 1fr;
         justify-items: center;
         width: 100%;
+        gap: var(--spacing-md);
     }
     
     .hero-image {
