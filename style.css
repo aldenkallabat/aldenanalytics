@@ -431,15 +431,6 @@ main {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
-    .hero-section {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .hero-text {
-        font-size: 3.5rem;
-    }
-    
     .cards-grid {
         grid-template-columns: 1fr;
     }
