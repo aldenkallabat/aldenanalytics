@@ -156,3 +156,21 @@ function debounce(func, wait) {
 // Apply debouncing to scroll event for better performance
 const debouncedFooterCheck = debounce(handleFooterVisibility, 10);
 window.addEventListener('scroll', debouncedFooterCheck);
+
+// ===== MOBILE DROPDOWN MENU =====
+// Toggle dropdown menu on mobile devices
+
+function toggleDropdown() {
+    const dropdown = document.getElementById('mobileDropdown');
+    dropdown.classList.toggle('active');
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+    const dropdown = document.getElementById('mobileDropdown');
+    const dropdownBtn = document.querySelector('.dropdown-btn');
+    
+    if (dropdown && !dropdown.contains(e.target) && e.target !== dropdownBtn) {
+        dropdown.classList.remove('active');
+    }
+});
