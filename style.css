@@ -549,6 +549,13 @@ main {
         background: rgba(21, 255, 224, 0.192);
     }}
 
+    /* Desktop: hide mobile navigation */
+@media (min-width: 769px) {
+    .mobile-nav {
+        display: none;
+    }
+}
+
 
 /* ===== UTILITY CLASSES ===== */
 .text-center {
