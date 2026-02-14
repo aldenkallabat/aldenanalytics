@@ -549,6 +549,46 @@ main {
         background: rgba(21, 255, 224, 0.192);
     }}
 
+    /*Mobile Centering */
+    .hero-text {
+        font-size: 2.5rem;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .hero-section {
+        justify-items: center;
+        width: 100%;
+    }
+    
+    .hero-image {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero-image img {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .cards-grid {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    
+    .center-card {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    main {
+        padding: calc(60px + var(--spacing-sm)) var(--spacing-sm) var(--spacing-md) var(--spacing-sm);
+        width: 100%;
+        max-width: 100%;
+    }
+
     /* Desktop: hide mobile navigation */
 @media (min-width: 769px) {
     .mobile-nav {
