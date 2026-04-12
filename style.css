@@ -331,11 +331,13 @@ main {
     width: 500px;
     height: 500px;
     object-fit: cover;
+    object-position: 55% center;
     border-radius: 50%;
     box-shadow: 0 0 40px rgba(21, 255, 224, 0.329);
     animation: fadeIn 0.8s ease 0.4s forwards;
     opacity: 0;
     filter: brightness(0.85);
+    transform: scale(1.05);
 }
 
 @keyframes fadeIn {
